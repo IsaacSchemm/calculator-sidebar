@@ -140,9 +140,9 @@ function display_result(){
 		last_printed=to_print;
 		document.calculator.line.value=to_print;
 		history_index=1;
-		document.calculator.line.style.backgroundColor='#aacc99';
+		//document.calculator.line.style.backgroundColor='#aacc99';
 	}else{
-		document.calculator.line.style.backgroundColor='#cccc99';
+		//document.calculator.line.style.backgroundColor='#cccc99';
 	}
 }
 function round_extra_sf(f){
@@ -266,7 +266,7 @@ function set_calc(s){
 		last_input='';
 		last_printed='';
 		history_index=1;
-		document.calculator.line.style.backgroundColor='#cccc99';
+		//document.calculator.line.style.backgroundColor='#cccc99';
 		document.calculator.line.focus();
 	}
 }
@@ -287,14 +287,14 @@ function append_calc(s,replaceLast){
 		last_input='';
 		last_printed='';
 		history_index=1;
-		document.calculator.line.style.backgroundColor='#cccc99';
+		//document.calculator.line.style.backgroundColor='#cccc99';
 		document.calculator.line.focus();
 	}
 }
 function clear_calc(){
 	document.calculator.line.value='';
 	history_index=1;
-	document.calculator.line.style.backgroundColor='#cccc99';
+	//document.calculator.line.style.backgroundColor='#cccc99';
 	document.calculator.line.focus();
 }
 function add_toHistory(s){
