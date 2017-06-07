@@ -1,6 +1,7 @@
 body {
 	background-color: ThreeDFace;
 	font-size: 10pt;
+	font-family: sans-serif;
 }
 input.advanced {
 	font-size: 9pt;
@@ -25,8 +26,15 @@ input.line {
 	width: 100%;
 	box-sizing: border-box;
 }
+p.keyshortcut {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
 input.keyshortcut {
-	width: 32px;
+	padding: 0;
+	width: 4px;
+	flex: 1 1 auto;
 }
 .keypad, .options, select {
 	width: 100%;
