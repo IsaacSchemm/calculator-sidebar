@@ -4,15 +4,18 @@ body {
 }
 input.advanced {
 	font-size: 9pt;
-	width: .75cm;
+	width: 100%;
 	padding: 0;
 	margin: 0;
+}
+td.advanced {
+	width: .75cm;
 }
 input.clear, input.number, input.operand, input.equal, input.other {
 	font-size: 15pt;
 }
 input.clear, input.number, input.operand, input.equal, input.other {
-	width: 1cm;
+	width: 100%;
 	font-weight: bold;
 	padding: 2px;
 }
@@ -26,8 +29,10 @@ input.keyshortcut {
 	width: 32px;
 }
 .keypad, .options, select {
-	width: 204px;
+	width: 100%;
+	max-width: 300px;
 	margin: auto;
+	table-layout: fixed;
 }
 .hide_in_sidebar {
 	display: none;
