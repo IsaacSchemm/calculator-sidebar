@@ -1,0 +1,39 @@
+body {
+	background-color: ThreeDFace;
+	font-size: 10pt;
+}
+input.advanced {
+	font-size: 9pt;
+	width: .75cm;
+	padding: 0;
+	margin: 0;
+}
+input.clear, input.number, input.operand, input.equal, input.other {
+	font-size: 15pt;
+}
+input.clear, input.number, input.operand, input.equal, input.other {
+	width: 1cm;
+	font-weight: bold;
+	padding: 2px;
+}
+input.line {
+	font-size: 15pt;
+	font-weight: bold;
+	width: 100%;
+	box-sizing: border-box;
+}
+input.keyshortcut {
+	width: 32px;
+}
+.keypad, .options, select {
+	width: 204px;
+	margin: auto;
+}
+.hide_in_sidebar {
+	display: none;
+}
+@media (min-width: 390px) {
+	.hide_in_sidebar {
+		display: block;
+	}
+}
