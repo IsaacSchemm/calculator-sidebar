@@ -57,7 +57,7 @@ in your browser's preferences and then reload this page if you wish to use this 
 <td><input value="=" class="equal" accesskey="e" onclick="do_calculation();" title="Enter (Alt-e)" type="button"></td>
 </tr></tbody></table>
 <div class="options">
-<p><small>Display:</small><br>
+<p><small>Output display:</small><br>
 <select name="display" class="display" onchange="display_result();save_calc();" title="(Alt-d)">
 <option selected="selected">Decimal (Mixed Notation)
 </option><option>Decimal (Scientific Notation)
@@ -67,7 +67,7 @@ in your browser's preferences and then reload this page if you wish to use this 
 </option><option>Binary
 </option></select></p>
 <p><select name="history" class="history" onchange="if(this.selectedIndex>0)set_calc(this.options[this.selectedIndex].text);" title="View previous entries (Alt-h)">
-<option selected="selected">History:
+<option selected="selected">History
 </option><option></option><option></option><option></option><option></option><option></option><option></option><option></option><option></option><option>
 </option><option></option><option></option><option></option><option></option><option></option><option></option><option></option><option></option><option></option><option>
 </option></select></p>
@@ -82,7 +82,7 @@ in your browser's preferences and then reload this page if you wish to use this 
 </option><option value="PI ">&#960;
 </option><option value="SQRT1_2 ">sqrt(1/2)
 </option><option value="SQRT2 ">sqrt(2)
-</option></select>&nbsp;<small>(<a target="_blank" href="http://ostermiller.org/calc/calcdoc.html#constants">docs</a>)</small></p>
+</option></select><small style="float: right">(<a target="_blank" href="http://ostermiller.org/calc/calcdoc.html#constants">docs</a>)</small></p>
 <p><select name="mathFunctions" class="mathFunctions" onchange="append_calc(this.options[this.selectedIndex].value,0);this.selectedIndex=0;">
 <option selected="selected">Math Functions:
 </option><option value="abs(">abs
@@ -104,39 +104,13 @@ in your browser's preferences and then reload this page if you wish to use this 
 </option><option value="sin(">sin
 </option><option value="sqrt(">sqrt
 </option><option value="tan(">tan
-</option></select>&nbsp;<small>(<a target="_blank" href="http://ostermiller.org/calc/calcdoc.html#functions">docs</a>)</small></p>
-<p class="keyshortcut"><input value="H" accesskey="h" class="keyshortcut" onclick="display_nextHistory();" type="button">
-<input value="D" accesskey="d" class="keyshortcut" onclick="next_display_method();" type="button">
-<input value="M" accesskey="m" class="keyshortcut" onclick="display_method(0);" type="button">
-<input value="S" accesskey="s" class="keyshortcut" onclick="display_method(1);" type="button">
-<input value="G" accesskey="g" class="keyshortcut" onclick="display_method(2);" type="button">
-<input value="B" accesskey="b" class="keyshortcut" onclick="display_method(5);" type="button">
-<input value="O" accesskey="o" class="keyshortcut" onclick="display_method(4);" type="button">
-<input value="X" accesskey="x" class="keyshortcut" onclick="display_method(3);" type="button">
-<input value="A" accesskey="a" class="keyshortcut" onclick="append_calc('ans ',0);" type="button"></p>
+</option></select><small style="float: right">(<a target="_blank" href="http://ostermiller.org/calc/calcdoc.html#functions">docs</a>)</small></p>
 </div>
 </form>
 
 <div class="hide_in_sidebar">
 	<div style="height:1in;"></div>
 	<h3>Instructions</h3>
-
-	<table summary="List of keyboard shortcuts" align="right" border="0" hspace="20" vspace="20" width="150"><tbody><tr><td>
-	<b>Keyboard shortcuts (Alt or Cmd):</b><br>
-	<ul>
-	<li><u>C</u>lear</li>
-	<li><u>E</u>quals</li>
-	<li><u>H</u>istory (previous)</li>
-	<li><u>D</u>isplay (cycle)</li>
-	<li>Decimal <u>m</u>ixed display</li>
-	<li>Decimal <u>S</u>cientific display</li>
-	<li>Decimal En<u>g</u>ineering display</li>
-	<li><u>B</u>inary display</li>
-	<li><u>O</u>ctal display</li>
-	<li>He<u>x</u> display</li>
-	<li>Last <u>A</u>nswer</li>
-	</ul>
-	</td></tr></tbody></table>
 
 	<p>Enter an expression into the bar and press enter to calculate the results.  </p>
 
