@@ -13,7 +13,7 @@ td.advanced {
 	width: .75cm;
 }
 input.clear, input.number, input.operand, input.equal, input.other {
-	font-size: 15pt;
+	font-size: 14pt;
 }
 input.clear, input.number, input.operand, input.equal, input.other {
 	width: 100%;
