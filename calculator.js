@@ -317,8 +317,8 @@ function add_toHistory(s){
 function load_calc(){
 	modifying_history=true;
 	var history_elements=document.calculator.history.options;
-	var calc_cookie=get_cookie('calculatorState');
-	if(calc_cookie!=null&&calc_cookie.length>1){
+	var calc_cookie=window.localStorage&&localStorage.getItem("calculatorState");
+	if(calc_cookie!=null){
 		var history_part=calc_cookie.substring(1,calc_cookie.length);
 		if(history_part!=null){
 			var history_split=history_part.split('\n');
@@ -336,27 +336,7 @@ function save_calc(){
 	for(var i=1;i<history_elements.length;i++){
 		calc_cookie+=history_elements[i].text+'\n';
 	}
-	var expires_date=new Date();
-	// cookie expires in one year
-	expires_date.setTime(expires_date.getTime()+365*24*60*60*1000);
-	document.calc_cookie=(
-		'calculatorState'+'='+
-		escape(calc_cookie)+
-		';expires='+expires_date.toGMTString()
-	);
-}
-function get_cookie(name){
-	var cookie_prefix=name+"=";
-	var cookie_begin=document.cookie.indexOf(";"+cookie_prefix);
-	if(cookie_begin==-1){
-		cookie_begin=document.cookie.indexOf(cookie_prefix);
-		if(cookie_begin!=0)return null;
-	}else{
-		cookie_begin+=2;
-	}
-	var cookie_end=document.cookie.indexOf(";",cookie_begin);
-	if(cookie_end==-1)cookie_end=document.cookie.length;
-	return unescape(document.cookie.substring(cookie_begin+cookie_prefix.length,cookie_end));
+	if (window.localStorage) localStorage.setItem("calculatorState", calc_cookie);
 }
 function display_nextHistory(){
 	var history_elements=document.calculator.history.options;
