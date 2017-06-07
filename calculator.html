@@ -18,9 +18,9 @@
 <noscript><p>This scientific calculator requires Javascript.  Please enable Javascript
 in your browser's preferences and then reload this page if you wish to use this scientific calculator.</p></noscript>
 <form name="calculator" onsubmit="do_calculation();return false;">
-<input class="line" name="line" onchange="line_change();" type="text">
+<input value="" class="line" name="line" onchange="line_change();" type="text">
 <br>
-<table summary="Calculator"><tbody><tr><td valign="top">
+
 <table class="keypad" summary="Button Keypad"><tbody><tr>
 <td><input value="C" class="clear" accesskey="c" onclick="clear_calc();" title="Clear (Alt-c)" type="button"></td>
 <td><input value="(" class="other" onclick="append_calc('(',0);" title="Grouping Parenthesis" type="button"></td>
@@ -56,7 +56,7 @@ in your browser's preferences and then reload this page if you wish to use this 
 <td><input value="." class="other" onclick="append_calc('.',2);" title="Decimal Point" type="button"></td>
 <td><input value="=" class="equal" accesskey="e" onclick="do_calculation();" title="Enter (Alt-e)" type="button"></td>
 </tr></tbody></table>
-</td><td valign="top">
+<div class="options">
 <p><small>Display:</small><br>
 <select name="display" class="display" onchange="display_result();save_calc();" title="(Alt-d)">
 <option selected="selected">Decimal (Mixed Notation)
@@ -114,82 +114,69 @@ in your browser's preferences and then reload this page if you wish to use this 
 <input value="O" accesskey="o" class="keyshortcut" onclick="display_method(4);" type="button">
 <input value="X" accesskey="x" class="keyshortcut" onclick="display_method(3);" type="button">
 <input value="A" accesskey="a" class="keyshortcut" onclick="append_calc('ans ',0);" type="button"></p>
-</td></tr></tbody></table>
+</div>
 </form>
 <div style="height:1in;"></div>
-<form><input class="popup" value="Popup Calculator" onclick="javascript:window.open('calculator.html','calculator'+new Date().getTime(),'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=yes,copyhistory=no,width=450,height=300');" type="button"></form>
-<h3>Instructions</h3>
 
-<table summary="List of keyboard shortcuts" width="150" hspace="20" vspace="20" align="right" border="0"><tbody><tr><td>
-<b>Keyboard shortcuts (Alt or Cmd):</b><br>
-<ul>
-<li><u>C</u>lear</li>
-<li><u>E</u>quals</li>
-<li><u>H</u>istory (previous)</li>
-<li><u>D</u>isplay (cycle)</li>
-<li>Decimal <u>m</u>ixed display</li>
-<li>Decimal <u>S</u>cientific display</li>
-<li>Decimal En<u>g</u>ineering display</li>
-<li><u>B</u>inary display</li>
-<li><u>O</u>ctal display</li>
-<li>He<u>x</u> display</li>
-<li>Last <u>A</u>nswer</li>
-</ul>
-</td></tr></tbody></table>
+<div class="hide_in_sidebar">
+	<h3>Instructions</h3>
 
-<p>Enter an expression into the tan bar and press enter to calculate the results.  </p>
+	<table summary="List of keyboard shortcuts" align="right" border="0" hspace="20" vspace="20" width="150"><tbody><tr><td>
+	<b>Keyboard shortcuts (Alt or Cmd):</b><br>
+	<ul>
+	<li><u>C</u>lear</li>
+	<li><u>E</u>quals</li>
+	<li><u>H</u>istory (previous)</li>
+	<li><u>D</u>isplay (cycle)</li>
+	<li>Decimal <u>m</u>ixed display</li>
+	<li>Decimal <u>S</u>cientific display</li>
+	<li>Decimal En<u>g</u>ineering display</li>
+	<li><u>B</u>inary display</li>
+	<li><u>O</u>ctal display</li>
+	<li>He<u>x</u> display</li>
+	<li>Last <u>A</u>nswer</li>
+	</ul>
+	</td></tr></tbody></table>
 
-<p>This calculator remembers up to twenty past calculations in history.  To save the history
-between visits you must have cookies enabled.</p>
+	<p>Enter an expression into the bar and press enter to calculate the results.  </p>
 
-<p>All results are calculated using the Javascript eval() function.  Syntax for expressions
-is the same as that for Javascript.</p>
+	<p>This calculator remembers up to twenty past calculations in history.  To save the history
+	between visits you must have cookies enabled.</p>
 
-<p>This calculator can handle input numbers in several different bases:</p>
-<ul>
-<li>Decimal (Base 10): Numbers that do not start with a zero like 15 or 3.14e15.
-Decimal numbers can contain digits 0-9, decimals, and scientific notation.</li>
-<li>Hexadecimal (Base 16): Integers that start with a zero x like 0x1a5.  Hexadecimal numbers
-can contain digits 0-9 and a-f (or A-F) but no decimal or scientific notation.</li>
-<li>Octal (Base 8): Integers that start with a zero like 073.  Octal numbers
-can contain digits 0-7 but no decimal or scientific notation.</li>
-<li>Binary (Base 2): Integers that start with a zero b like 0b101.  Binary numbers
-can contain digits 0 and 1 but no decimal or scientific notation.</li>
-</ul>
+	<p>All results are calculated using the Javascript eval() function.  Syntax for expressions
+	is the same as that for Javascript.</p>
 
-<p>^ is a bitwise xor operation.  To raise a number to a power use pow() function.</p>
-<hr>
+	<p>This calculator can handle input numbers in several different bases:</p>
+	<ul>
+	<li>Decimal (Base 10): Numbers that do not start with a zero like 15 or 3.14e15.
+	Decimal numbers can contain digits 0-9, decimals, and scientific notation.</li>
+	<li>Hexadecimal (Base 16): Integers that start with a zero x like 0x1a5.  Hexadecimal numbers
+	can contain digits 0-9 and a-f (or A-F) but no decimal or scientific notation.</li>
+	<li>Octal (Base 8): Integers that start with a zero like 073.  Octal numbers
+	can contain digits 0-7 but no decimal or scientific notation.</li>
+	<li>Binary (Base 2): Integers that start with a zero b like 0b101.  Binary numbers
+	can contain digits 0 and 1 but no decimal or scientific notation.</li>
+	</ul>
 
-<table summary="" width="300" cellpadding="10" align="right" border="0"><tbody><tr><td>
-<p>Popup <a href="javascript:(function(){window.open('http://ostermiller.org/calc/calculator.html','calculator'+new%20Date().getTime(),'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=yes,copyhistory=no,width=450,height=300');})();">Calculator</a> Bookmarklet -
-Open the calculator anytime by dragging this Javascript
-link to your bookmarks/favorites or by right clicking on it and bookmarking/adding to favorites.</p>
-<p>Pop up this calculator from your web page, just copy this code:<br>
-<textarea rows="4" cols="30">&lt;form&gt;&lt;input type="button" 
-value="Popup Calculator" 
-onclick="javascript:window.open('http://ostermiller.org/calc/calculator.html','calculator'+new
- 
-Date().getTime(),'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=yes,copyhistory=no,width=450,height=300');"&gt;&lt;/form&gt;</textarea></p>
-</td></tr></tbody></table>
+	<p>^ is a bitwise xor operation.  To raise a number to a power use pow() function.</p>
+	<hr>
 
-<h3>License</h3>
+	<h3>License</h3>
 
-<p>This program is free software;you can redistribute it and/or modify it
-under the terms of the GNU General Public License as published by the Free
-Software Foundation;either version 2 of the License, or (at your option)
-any later version.</p>
+	<p>This program is free software;you can redistribute it and/or modify it
+	under the terms of the GNU General Public License as published by the Free
+	Software Foundation;either version 2 of the License, or (at your option)
+	any later version.</p>
 
-<p>This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
-or FITNESS FOR A PARTICULAR PURPOSE. See the
-<a href="http://www.gnu.org/copyleft/gpl.html">GNU
-General Public License</a> for more details.</p>
+	<p>This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+	or FITNESS FOR A PARTICULAR PURPOSE. See the
+	<a href="http://www.gnu.org/copyleft/gpl.html">GNU
+	General Public License</a> for more details.</p>
 
-<p style="text-size:small">scientific calculater, binary calc, octal, hex, hexadecimal, hexidecimal</p>
-
-<div style="padding:0.2cm;"><a href="http://ostermiller.org/calc/">More converters, calculators, and other JavaScript goodies</a></div>
-<div style="padding:0.2cm;text-align:right;"><a href="http://ostermiller.org/">ostermiller.org</a> (<a href="http://ostermiller.org/siteindex.html">site index</a>)</div>
-<div style="padding:0.2cm;"><p>Copyright <a href="http://ostermiller.org/contact.pl?regarding=JavaScript+Calculator" class="mail">Stephen Ostermiller</a> 2002-2014</p></div>
+	<div style="padding:0.2cm;"><a href="javascript:sidebar.addPanel('Scientific Calculator',location.href,null);">Add to sidebar (SeaMonkey)</a></div>
+	<div style="padding:0.2cm;"><p>Copyright &copy; 2002-2014 Stephen Ostermiller, 2016-2017 Isaac Schemm</p></div>
+</div>
 
 
 </body></html>
