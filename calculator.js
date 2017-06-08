@@ -340,7 +340,13 @@ function load_calc(){
 			}
 			themelink.href = newTheme.value;
 		}
-		themes.onchange();
+		for (var i=0; i<themes.options.length; i++) {
+			if (themes.options[i].innerHTML == selectedTheme) {
+				themes.options[i].selected = true;
+				themes.onchange();
+				break;
+			}
+		}
 	}
 	modifying_history=false;
 }
