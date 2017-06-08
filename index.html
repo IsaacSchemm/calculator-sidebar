@@ -6,8 +6,7 @@
 
 <link rel="shortcut icon" href="calculator.ico" type="image/x-icon">
 <script language="javascript" type="text/javascript" src="calculator.js"></script>
-<link rel="stylesheet" type="text/css" href="sidebar.css" title="Theme 1">
-<link rel="stylesheet alternate" type="text/css" href="calculator.css" title="Theme 2">
+<link rel="stylesheet" id="themelink" type="text/css" href="light.css">
 
 </head>
 <body onload="load_calc();document.calculator.line.focus();">
@@ -102,6 +101,11 @@ in your browser's preferences and then reload this page if you wish to use this 
 </option><option value="sqrt(">sqrt
 </option><option value="tan(">tan
 </option></select><small style="float: right">(<a target="_blank" href="http://ostermiller.org/calc/calcdoc.html#functions">docs</a>)</small></p>
+<p><small>Theme:</small><br><select id="themes">
+<option value="light.css">Light</option>
+<option value="native.css">Native</option>
+<option value="calculator.css">Original</option>
+</select></p>
 </div>
 </form>
 

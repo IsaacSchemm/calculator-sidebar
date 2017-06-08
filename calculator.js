@@ -328,6 +328,20 @@ function load_calc(){
 		}
 		document.calculator.display.selectedIndex=parseInt(calc_cookie.charAt(0));
 	}
+	if (document.getElementById) {
+		var themes = document.getElementById("themes");
+		var selectedTheme = window.localStorage && localStorage.getItem("theme");
+		var themelink = document.getElementById("themelink");
+		
+		themes.onchange = function () {
+			var newTheme = themes.options[themes.selectedIndex];
+			if (window.localStorage) {
+				localStorage.setItem("theme", newTheme.innerHTML);
+			}
+			themelink.href = newTheme.value;
+		}
+		themes.onchange();
+	}
 	modifying_history=false;
 }
 function save_calc(){
