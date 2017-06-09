@@ -6,13 +6,13 @@ body {
 }
 input[type=button],
 select {
-    border: 6px solid;
+    border: 4px solid;
     border-color: transparent;
-    -moz-border-top-colors: transparent transparent transparent #000000 #BBC6D1 #B1BBC9;
-    -moz-border-right-colors: transparent transparent transparent #000000 #A2AEBB #A7B4C1;
-    -moz-border-bottom-colors: transparent transparent transparent #000000 #97A6B6 #9DAAB9;
-    -moz-border-left-colors: transparent transparent transparent #000000 #BBC6D1 #B1BBC9;
-    border-radius: 5px;
+    -moz-border-top-colors: transparent #000000 #BBC6D1 #B1BBC9;
+    -moz-border-right-colors: transparent #000000 #A2AEBB #A7B4C1;
+    -moz-border-bottom-colors: transparent #000000 #97A6B6 #9DAAB9;
+    -moz-border-left-colors: transparent #000000 #BBC6D1 #B1BBC9;
+    border-radius: 3px;
     background-color: #AAB6C4;
     background-clip: padding-box;
     color: #000000;
@@ -28,10 +28,10 @@ select {
 }
 input[type=button]:hover:active,
 select:focus {
-    -moz-border-top-colors: transparent transparent transparent #000000 #8290A5 #899AAC;
-    -moz-border-right-colors: transparent transparent transparent #000000 #8290A5 #899AAC;
-    -moz-border-bottom-colors: transparent transparent transparent #000000 #8290A5 #899AAC;
-    -moz-border-left-colors: transparent transparent transparent #000000 #8290A5 #899AAC;
+    -moz-border-top-colors: transparent #000000 #8290A5 #899AAC;
+    -moz-border-right-colors: transparent #000000 #8290A5 #899AAC;
+    -moz-border-bottom-colors: transparent #000000 #8290A5 #899AAC;
+    -moz-border-left-colors: transparent #000000 #8290A5 #899AAC;
     background-color: #90A1B3;
     color: #FFFFFF;
 }
