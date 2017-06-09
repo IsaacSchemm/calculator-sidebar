@@ -39,10 +39,11 @@ input.advanced {
 	font-size: 9pt;
 	width: 100%;
 	padding: 0;
-	margin: 0;
+	margin-bottom: 0;
 }
 td.advanced {
-	width: .75cm;
+	width: 24px;
+	vertical-align: top;
 }
 input.clear, input.number, input.operand, input.equal, input.other {
 	font-size: 14pt;
