@@ -4,6 +4,9 @@ body {
 	font-size: 10pt;
 	font-family: sans-serif;
 }
+td {
+	vertical-align: top;
+}
 input.advanced {
 	font-size: 9pt;
 	width: 100%;
@@ -11,7 +14,6 @@ input.advanced {
 }
 td.advanced {
 	width: 24px;
-	vertical-align: top;
 }
 input.clear, input.number, input.operand, input.equal, input.other {
 	font-size: 14pt;
